@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="purchase_order_group_lines_form" model="ir.ui.view">
+        <field name="name">purchase.order.group.lines.form</field>
+	<field name="model">purchase.order</field>
+	<field name="inherit_id" ref="purchase.purchase_order_form"></field>
+	<field name="arch" type="xml">
+		<xpath expr="//notebook" position="inside">
+			<page string="Grouped lines">
+				<field name="group_line_ids">
+					<tree>
+						<field name="product_id" />
+						<field name="product_uom" />
+						<field name="price_unit" />
+						<field name="product_qty" />
+						<field name="price_subtotal" />
+						<field name="price_total" />
+					</tree>
+				</field>
+			</page>
+		</xpath>
+        </field>
+    </record>
+
+
+</odoo>
